@@ -13,8 +13,14 @@ namespace ConsoleApp4
 
         public Process LockedBy;
         public Resource() {
-
             Id = Interlocked.Increment(ref nextId);
         }
+        public static int GetAmm() { return nextId; }
+
+        public override string ToString()
+        {
+            return $"Resource: {Id}";
+        }
+
     }
 }

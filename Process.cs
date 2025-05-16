@@ -16,6 +16,7 @@ namespace ConsoleApp4
         public Process() {
 
             Id = Interlocked.Increment(ref nextId);
+            WaitingFor = [];
         }
         public void ReleaseResources()
         {
@@ -27,6 +28,21 @@ namespace ConsoleApp4
             {
 
             }
+        }
+        //public void LockResources(List<Resource> list, Process proc)
+        //{
+        //    //   foreach (Resource r in resources)
+        //    //     {
+        //    foreach (Resource r in list)
+        //    {
+        //        L
+        //    }
+        //    // }
+        //}
+        public static int GetAmm() { return  nextId; }
+        public override string ToString()
+        {
+            return $"Process: {Id}";
         }
     }
 }
